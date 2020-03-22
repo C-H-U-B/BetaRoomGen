@@ -5,51 +5,16 @@ using Random = System.Random;
 
 public class thematrix : MonoBehaviour
 {
-    private salle[,] matrix;
+    public salle[,] matrix;
     public GameObject None,room;
     private Random r = new Random();
 
     [SerializeField] int size;
     // Start is called before the first frame update
-    void Start()
-    {
-        //Instantiate(room, new Vector3(0, 0, 0), Quaternion.identity);
-        thematrix dungeon = new thematrix(size,0);
-        
-        dungeon.generatedungeon(size);
-        
-        for (int i = 0; i < size; i++)
-        {
-            for (int j = 0; j < size; j++)
-            {
-                Vector3 vec =new Vector3(i*10,j*10,0);
-               Instantiate(dungeon.matrix[i,j].room, vec, Quaternion.identity);
-                if (matrix[i,j].bot)
-                    //Destroy(dungeon.matrix[i,j].Botdoor);
-                    Debug.Log("bot");
-                if (matrix[i,j].top)
-                    //Destroy(dungeon.matrix[i,j].Topdoor);
-                    Debug.Log("top");
-                if (matrix[i,j].right)
-                   // Destroy(dungeon.matrix[i,j].Rightdoor);
-                    Debug.Log("ri");
-                if (matrix[i, j].left)
-                    Debug.Log("le"); 
-                //Destroy(dungeon.matrix[i,j].Leftdoor);
-                //Instantiate(room, vec, Quaternion.identity);
-            }
-        }
-        GameObject.Find("Main Camera").transform.position=new Vector3(size*5,size*5,-1);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     // constructeur de la matrice
-    public thematrix(int size,int biome)
+    public salle[,] Thematrix(int size,int biome)
     { 
         if (size % 2 == 0) size += 1;
         matrix = new salle[size,size];
@@ -60,7 +25,9 @@ public class thematrix : MonoBehaviour
                 
                 matrix[i, j].room = room;
             }
-        } 
+        }
+
+        return matrix;
     }
 
 

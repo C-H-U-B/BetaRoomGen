@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 369826414}
   - component: {fileID: 369826413}
+  - component: {fileID: 369826415}
   m_Layer: 0
   m_Name: starter
   m_TagString: Untagged
@@ -151,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   None: {fileID: 503219292303751165, guid: 911c8c966e293cb4d87a993eeb635447, type: 3}
-  startroom: {fileID: 4516082222796510372, guid: ffbbad8e47c61c04dacb22692107662b,
-    type: 3}
+  room: {fileID: 4516082222796510372, guid: ffbbad8e47c61c04dacb22692107662b, type: 3}
+  size: 9
 --- !u!4 &369826414
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +168,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &369826415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369826412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b744d02e429b34ab969d8e8db07e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
