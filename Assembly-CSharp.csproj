@@ -58,8 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\cleanscript.cs" />
      <Compile Include="Assets\doors.cs" />
      <Compile Include="Assets\generation.cs" />
+     <Compile Include="Assets\matrixé.cs" />
      <Compile Include="Assets\roomlistscript.cs" />
      <Compile Include="Assets\salle.cs" />
      <Compile Include="Assets\thematrix.cs" />

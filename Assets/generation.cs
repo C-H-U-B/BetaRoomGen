@@ -10,7 +10,7 @@ public class generation : MonoBehaviour
     void Start()
     {
         //Instantiate(room, new Vector3(0, 0, 0), Quaternion.identity);
-         dungeon = thematrix.Thematrix(size, 0);
+         
         
         dungeon.generatedungeon(size);
         
