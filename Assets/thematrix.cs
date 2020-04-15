@@ -71,25 +71,25 @@ public class thematrix : MonoBehaviour
     
     //fonction qui va choisir une salle ou continuer le donjon
     public (int,int) recdungeon(int size)
-    {
-        List<(int,int)> a = new List<(int, int)>();
-        for (int i = 0; i < size; i++)
-        {
-            for (int j = 0; j < size; j++)
-            {
-                if(IsAccesible(size,i,j))
-                    a.Add((i,j));
-            }
-        }
-        int b = 0;
-        int c = a.Count-1;
-        if (c >= 0)
-            b += r.Next(c);
-        if (c == -1)
-            return (-1, -1);
-        (int x, int y) = a[b];
-        return (x,y);
-    }
+         {
+             List<(int,int)> a = new List<(int, int)>();
+             for (int i = 0; i < size; i++)
+             {
+                 for (int j = 0; j < size; j++)
+                 {
+                     if(IsAccesible(size,i,j))
+                         a.Add((i,j));
+                 }
+             }
+             int b = 0;
+             int c = a.Count-1;
+             if (c >= 0)
+                 b += r.Next(c);
+             if (c == -1)
+                 return (-1, -1);
+             (int x, int y) = a[b];
+             return (x,y);
+         }
 
     
 /* partie des tests sur les cases*/    
